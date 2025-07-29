@@ -1,0 +1,39 @@
+//二分查找法，此处采用浮点型数组
+#include <stdio.h>
+#include <string.h>
+
+int bisection(float* array,float target){
+   int len=sizeof(array)/sizeof(array[0]);
+   int left=0;
+   int right=len-1;
+   
+
+   while(left<=right){
+    int mid=(right+left)/2;
+
+    if(array[mid]==target){
+        return mid;
+    }
+    else if (array[mid]>target){
+        right=mid-1;
+    }
+    else{
+        left=mid+1;
+    }
+   }
+   return -1;
+}
+
+int main(){
+    float array[4]={0.1,0.4,0.7,0.9};
+    float target=1.0;
+    int result;
+
+    result=bisection(array,target);
+    printf("%d",result);
+
+    return 0;
+
+}
+  
+
