@@ -1,1 +1,1 @@
-# Kimora Liu的算法学习笔记
+# Kimora Liu的学习笔记
